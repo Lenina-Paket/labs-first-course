@@ -1,0 +1,15 @@
+#!/bin/bash
+suf=${1##*.}
+
+for file in $(pwd)/*
+	do
+	filename=$(basename $file)
+    	curSuf=${filename##*.}
+	links=$(stat --format=%h $file)
+	
+	if [[ "$curSuf" == "$suf" ]] && (( links > 1 )) && ! [[ -L "$file" ]]; then
+	cp "$file" "$suf"_"$filename"
+	fi
+	
+done
+
