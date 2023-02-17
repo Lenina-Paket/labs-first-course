@@ -8,7 +8,7 @@ for file in $(pwd)/*
 	links=$(stat --format=%h $file)
 	
 	if [[ "$curSuf" == "$suf" ]] && (( links > 1 )) && ! [[ -L "$file" ]]; then
-	cp "$file" "$suf"_"$filename"
+		cp "$file" "$suf"_"$filename"
 	fi
 	
 done
