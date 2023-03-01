@@ -1,0 +1,116 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{geometry}
+\geometry{papersize={21 cm,29.7 cm}}
+\geometry{left=2.5cm}
+\geometry{right=2.5cm}
+\geometry{top=1.8cm}
+\geometry{bottom=1.8cm}
+\setcounter{page}{42}
+\linespread{1.15},
+\begin{document}
+\par\noindent\rule{\textwidth}{0.5pt}
+\large\centerline{\textbf{Лекция 10. Производная функции}}
+\par\noindent\rule{\textwidth}{0.5pt}
+
+\begin{equation*}
+    \normalsize {Пусть функция $y = f(x)$ определена на интервале $(a;b)$ и $x \in (a;b)$. Пусть $\Delta x $ произвольное число такое, что $x + \Delta x \in (a;b)$. Число $ \Delta y = f (x + \Delta x) - f(x)$ называется приращением функции $y = f(x)$ в точке $x$.\\}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Определение.} Если существует предел $\lim\limits_{\Delta x\to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$, то он называется \textbf{производной} функции $y = f(x)$ в точке $x$ и обозначается $f'(x)$ или $y'$.\\}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Определение.} Если существует предел $\lim\limits_{\Delta x\to +0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$, то он называется \textbf{правой производной} функции $y = f(x)$ в точке $x$ и обозначается $f'(x + 0)$ или $y'$. \\}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Определение.} Если существует предел $\lim\limits_{\Delta x\to -0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$, то он называется \textbf{левой  производной} функции $y = f(x)$ в точке $x$ и обозначается $f'(x - 0)$ или $y'$. }
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{По свойству пределов, производная в точке существует тогда и только тогда, когда в этой точке существуют правая и левая производные и они равны.\\}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Определение.} Функция $y = f(x)$ называется дифференцируемой в точке $x$, если её приращение в этой точке можно представить в виде $\Delta y = A \cdot \Delta x + \alpha(\Delta x) \cdot \Delta x,$ где $\lim\limits_{\Delta x\to 0} \alpha(\Delta x) = 0.$ А не зависит от \Delta x} 
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{По определению о-малое, получаем $\Delta y = A \cdot \Delta x + o(\Delta x),\Delta x\to 0.$ В самой точке $\Delta x = 0$ функция $\alpha(\Delta x)$  может быть и не определена. Ей можно приписать любое значение. Для дальнейшего удобно считать, что $\alpha (0) = 0$. При такой договорённости эта функция будет непрерывна в точке 0.\\}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Теорема.} Если функция дифференцируема в точке $x_0$, то она непрерывна в этой точке.\\}
+\end{equation*}
+\begin{equation*}
+    \noindent\normalsize{\textbf{Доказательство.} Имеем}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize $f(x) - f(x_0) = f(x_0 + (x - x_0)) - f(x_0) = A \cdot (x - x_0) + \alpha((x-x_0)) \cdot(x-x_0).$
+\end{equation*}
+\begin{equation*}
+    \noindent\normalsize{Так как $\lim\limits_{x \to x_0} \alpha(x - x_0) = 0$, то $\lim\limits_{x \to x_0} f(x) = f(x_0)$. \textbf{Теорема доказана.}}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Теорема.} Для того чтобы функция $y = f(x)$ была дифференцируемой в точке $x$, необходимо и достаточно, чтобы она имела в этой производную.}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{\textbf{Доказательство.} Пусть функция дифференцируема, тогда $\Delta y = A \cdot \Delta x + \alpha (\Delta x) \cdot \Delta x$. Отсюда\\}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{$\lim\limits_{\Delta x\to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x\to 0} A + \alpha(\Delta x) = A$.}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{Следовательно, производная в точке $x$ существует и равна $A$. Обратно, пусть существует производная в точке $x$. Тогда \exists$\lim\limits_{\Delta x\to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} = f'(x)$.}
+\end{equation*}
+
+\begin{equation*}
+    \noindent\normalsize{Следовательно, если обозначить $\alpha(\Delta x) = \frac{f(x + \Delta x) - f(x)}{\Delta x} - f'(x)$, то $\lim\limits_{\Delta x \to 0} \alpha(\Delta x) = 0$ и $\Delta y = f'(x) \cdot \Delta x + \alpha(\Delta x) \cdot \Delta x .$ \textbf{Теорема доказана.\\}}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{Пусть функция $y = f(x)$ дифференцируема в точке $x$. Тогда, по доказанной теореме, имеем $\Delta y = f'(x)\Delta x + o(\Delta x)$, $\Delta x \to 0.$ Следовательно, линейная функция $f'(x)\Delta x$ переменной $\Delta$ x является главной частью приращения функции $y = f(x)$ в точке $x$. Эта линейная функция называется \textbf{дифференциалом} функции $y = f(x)$ в точке $x$ и обозначается $dy = f'(x)\Delta x .$ Обозначим $\Delta x$ как $dx$ и назовём \textbf{дифференциалом независимой переменной}.\\}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize\textbf{Теорема.} Если каждая из функций $f(x) и g(x)$ дифференцируемы в точке $х$, то сумма, разность, произведение и частное (при условии $g(x) \neq 0$) также дифференцируемы в точке $x$, причем имеют место формулы:\\}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{1. $(f \pm g)'(x) = f'(x) \pm g'(x);$\par}
+    \normalsize{2. $(f \cdot g)'(x) = f'(x)g(x) + f(x)g'(x);$\par}
+    \normalsize{3. $(\frac{f}{g})'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2} .$\\}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{\textbf{Доказательство.} Докажем для частного. Имеем \par}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{$\frac{1}{\Delta x}$ ($\frac{f(x + \Delta x)}{g(x + \Delta x)}$ - $\frac{f(x)}{g(x)})$ = $\frac{1}{\Delta x}$ ($\frac{\Delta f + f(x)}{\Delta g + g(x)}$ - $\frac{f(x)}{g(x)})$ = $\frac{1}{\Delta x}$ ($\frac{\Delta f   g(x) - \Delta g f(x)}{g(x + \Delta x) g(x)})$ = $\frac{\frac{\Delta f}{\Delta x} g(x) - \frac{\Delta g}{\Delta x}f(x)}{g(x + \Delta x) g(x)$} 
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{Отсюда получаем утверждение теоремы. \textbf{Теорема доказана}.\\}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{\textbf{Следствие.} Если функции $f(x) и g(x)$ удовлетворяют условиям предыдущей теоремы, то:\\}
+    \normalsize\centerline{$d(f \pm g) = df \pm dg ;$}
+    \normalsize\centerline{$d(f \cdot g) = g \cdot df + f \cdot dg ;$}
+    \normalsize\centerline{$d(\frac{f}{g}) = \frac{g \cdot df - f \cdot dg}{g^2} .$}
+\end{equation*}
+
+\begin{equation*}
+    \normalsize{\textbf{Теорема.} Пусть функция $x = \phi(t)$ дифференцируема в точке $t_0$, а функция $y = \phi (t_0)$, следовательно она определена в некоторой окрестности $W(x_0)$ точки $x_0$. Функция $x = \phi (t)$ дифференцируема в точке $t_0$, следовательно, она непрерывна в этой точке. Поэтому \exists $U(t_0) : \phi (U(t_0)) \subset W(x_0)$.}
+\end{equation*}
+
+\end{document}
