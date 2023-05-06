@@ -81,7 +81,7 @@ int main(void) {
     //int n = sizeof(arr) / sizeof(arr[0]);
     int index, ans = -1;
     int key, value;
-    printf("Let's scan some elements of your elts\n");
+    printf("Let's scan some elements of your mas\n");
     for (int i = 0; i < n; i++) {
         scanf("%d %d", &key, &value);
         arr[i].key = key;
