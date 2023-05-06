@@ -5,21 +5,6 @@ typedef struct MyStructure {
     int key;
     int value;
 } Mas;
-
-
-void PrintKeys(Mas *arr, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i].key);
-    }
-    printf("\n");
-}
-
-void PrintValues(Mas *arr, int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i].value);
-    }
-    printf("\n");
-}
  
 void Swap(Mas *x, Mas *y) {
     Mas tmp = *x;
@@ -75,6 +60,20 @@ int BinarySearch(Mas arr[], int n, int value) {
     }
     return -1;
 }
+
+void PrintKeys(Mas *arr, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i].key);
+    }
+    printf("\n");
+}
+
+void PrintValues(Mas *arr, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i].value);
+    }
+    printf("\n");
+}
  
 int main(void) {
     Mas arr[10] = {};
@@ -96,7 +95,6 @@ int main(void) {
 
     printf("Let's go to find your key!\n");
     scanf("%d", &index);
-    int low = 0, high = n - 1, mid;
     ans = BinarySearch(arr, n, index);
 
     if (ans != -1) printf("%d\n", ans);
